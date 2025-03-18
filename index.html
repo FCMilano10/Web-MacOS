@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web macOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MacOS Menu Bar -->
+    <div id="menu-bar">
+        <span> MacOS</span>
+        <span id="time"></span>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div id="desktop">
+        <div class="icon" onclick="openApp('finder')">🗂 Finder</div>
+        <div class="icon" onclick="openApp('notes')">📝 Notes</div>
+        <div class="icon" onclick="openApp('terminal')">💻 Terminal</div>
+    </div>
+
+    <!-- App Windows -->
+    <div id="finder" class="window">
+        <div class="title-bar">
+            <span>Finder</span>
+            <button onclick="closeApp('finder')">✖</button>
+        </div>
+        <div class="content">File Explorer</div>
+    </div>
+
+    <div id="notes" class="window">
+        <div class="title-bar">
+            <span>Notes</span>
+            <button onclick="closeApp('notes')">✖</button>
+        </div>
+        <textarea placeholder="Write your notes here..."></textarea>
+    </div>
+
+    <div id="terminal" class="window">
+        <div class="title-bar">
+            <span>Terminal</span>
+            <button onclick="closeApp('terminal')">✖</button>
+        </div>
+        <div class="content">Fake Terminal</div>
+    </div>
+
+    <!-- MacOS Dock -->
+    <div id="dock">
+        <div class="dock-item" onclick="openApp('finder')">🗂</div>
+        <div class="dock-item" onclick="openApp('notes')">📝</div>
+        <div class="dock-item" onclick="openApp('terminal')">💻</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
